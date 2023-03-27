@@ -22,6 +22,7 @@
                     <th scope="col">Title</th>
                     <th scope="col">Slug</th>
                     <th scope="col">Categoria</th>
+                    <th scope="col">Azioni</th>
                   </tr>
                 </thead>
                 @foreach ($posts as $index => $post)

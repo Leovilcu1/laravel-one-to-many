@@ -12,7 +12,13 @@
                Slug :  {{ $post->slug }}
             </h4>
             <p>Contenuto : {{ $post->content }}</p>
-            <h3>Categoria : {{ $post->category ? $post->category->name :"Nessuna categoria"}}</h3>
+
+            @if ($post->category)
+                <a href="{{ route("admin.categories.show",$post->category->id) }}">
+                {{ $post->category->name }}</a>
+            @else
+            Nessuna categoria
+            @endif
             @if ($post->img)
                 <div class="my-4">
                     <img  class="w-100 " src="{{ asset('storage/'.$post->img) }}" alt="">

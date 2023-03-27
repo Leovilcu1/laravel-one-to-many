@@ -26,7 +26,7 @@ Route::get('/', function () {
 Route::prefix('admin')->name('admin.')->middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
     Route::resource('posts', PostController::class);
-    Route::resource('category', CategoryController::class);
+    Route::resource('categories', CategoryController::class);
     
 });
 

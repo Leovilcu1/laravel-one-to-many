@@ -21,7 +21,7 @@
                     <th scope="col">ID</th>
                     <th scope="col">Title</th>
                     <th scope="col">Slug</th>
-                    <th scope="col">Action</th>
+                    <th scope="col">Categoria</th>
                   </tr>
                 </thead>
                 @foreach ($posts as $index => $post)
@@ -30,6 +30,7 @@
                     <th scope="row">{{ $post->id }}</th>
                     <td>{{ $post->title }}</td>
                     <td>{{ $post->slug }}</td> 
+                    <td>{{ $post->category ? $post->category->name : "Nessuna categoria" }}</td> 
                     <td>
                         <a href="{{ route("admin.posts.show",$post->id) }}" class="btn btn-primary" >Detagli</a>
                         <a href="{{ route("admin.posts.edit",$post->id) }}" class="btn btn-warning" >Aggiorna</a>

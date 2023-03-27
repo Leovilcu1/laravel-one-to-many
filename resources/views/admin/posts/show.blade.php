@@ -9,9 +9,10 @@
                 Progetto : <span class="text-danger">{{ $post->title }}</span>
             </h1>
             <h4>
-                {{ $post->slug }}
+               Slug :  {{ $post->slug }}
             </h4>
-            <p>{{ $post->content }}</p>
+            <p>Contenuto : {{ $post->content }}</p>
+            <h3>Categoria : {{ $post->category ? $post->category->name :"Nessuna categoria"}}</h3>
             @if ($post->img)
                 <div class="my-4">
                     <img  class="w-100 " src="{{ asset('storage/'.$post->img) }}" alt="">

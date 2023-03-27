@@ -27,6 +27,15 @@
                     <label for="img" class="form-label">immagine in evidenza</label>
                     <input type="file"  class="form-control" id="img" name="img" accept="image/*"  placeholder="inserisci l'immagine in evidenza...">
                 </div>
+                <div class="mb-3">
+                    <label for="category_id">Categoria</label>
+                    <option value="">Nessuna categoria</option>
+                    <select name="category_id" id="category_id" class="form-select">
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}"{{ old("category->id") == $category->id ?  "selected" : "" }}>{{ $category->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
                 <div> 
                     <button type="submit" class="btn btn-success">AGGIUNGI</button>
                 </div>

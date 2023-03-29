@@ -18,13 +18,12 @@ class CategorySeeder extends Seeder
     public function run()
     {
         $categories = [
-            "HDMI",
-            "CSS",
-            "JAVASCRIPT",
-            "BOOTSTRAP",
-            "MYSQL",
-            "LARAVEL",
-            "VUE"
+            "E-commerce",
+            "Vetrina",
+            "Loading page",
+            "Blog",
+            "Wiki",
+            "gestionali"
         ];
         foreach($categories as $category){
             $newCategory = Category::create([

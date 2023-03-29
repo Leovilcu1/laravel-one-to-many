@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col">
             <h1>
-                Aggiungi nuovo Progetto
+                Aggiungi nuovo Progett
             </h1>
         </div> 
     </div>
